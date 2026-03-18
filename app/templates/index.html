@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Wedding Concierge</title>
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/styles.css" />
+</head>
+
+<body>
+    <div class="page-shell">
+
+        <!-- Header -->
+        <header class="topbar">
+            <div class="brand-wrap">
+                <div class="brand-icon">💍</div>
+                <div>
+                    <div class="brand-title">Wedding Concierge</div>
+                    <div class="brand-subtitle">Phase 1 • Digital Concierge MVP</div>
+                </div>
+            </div>
+            <button class="ghost-btn">New session</button>
+        </header>
+
+        <!-- Row 1: Hero + Profile -->
+        <section class="top-row">
+            <div class="hero-block">
+                <h1>Plan your wedding with calm ✨</h1>
+                <p>
+                    Chat with your AI assistant to build your wedding profile, discover vendors,
+                    review contracts, and generate your checklist and budget.
+                </p>
+
+                <div class="feature-pills">
+                    <span class="pill active">Onboarding</span>
+                    <span class="pill">Vendor Recommendations</span>
+                    <span class="pill">Contract Reviews</span>
+                    <span class="pill">Wedding Timeline</span>
+                </div>
+            </div>
+
+            <div class="card profile-card">
+                <div class="panel-header">
+                    <h3>Wedding Profile</h3>
+                </div>
+                <div class="profile-grid">
+                    <div class="profile-item">
+                        <span class="profile-label">Wedding date</span>
+                        <span id="profileDate">—</span>
+                    </div>
+                    <div class="profile-item">
+                        <span class="profile-label">Budget total</span>
+                        <span id="profileBudget">—</span>
+                    </div>
+                    <div class="profile-item">
+                        <span class="profile-label">Location</span>
+                        <span id="profileLocation">—</span>
+                    </div>
+                    <div class="profile-item">
+                        <span class="profile-label">Vibe</span>
+                        <span id="profileVibe">—</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Row 2: Main dashboard -->
+        <section class="dashboard-grid">
+            <!-- Chat -->
+            <div class="card chat-card">
+                <div class="card-header">
+                    <div>
+                        <h2>AI Wedding Concierge</h2>
+                        <p>Ask questions, get suggestions, and build your plan.</p>
+                    </div>
+                    <div class="status-dot-wrap">
+                        <span class="status-dot"></span>
+                        <span>Connected</span>
+                    </div>
+                </div>
+
+                <div id="chat" class="chat"></div>
+
+                <div class="chat-input-row">
+                    <input id="msg" placeholder="Type a message..." />
+                    <button id="send" class="primary-btn">Send</button>
+                </div>
+
+                <div class="quick-prompts">
+                    <button class="prompt-chip" onclick="fillPrompt('What’s the first step?')">Try “What’s the first
+                        step?”</button>
+                    <button class="prompt-chip" onclick="fillPrompt('Find florist in Berlin')">Try “Find florist in
+                        Berlin”</button>
+                    <button class="prompt-chip" onclick="fillPrompt('How to reduce floral costs?')">Try “How to reduce
+                        floral costs?”</button>
+                </div>
+
+                <div class="tools-card">
+                    <div class="upload-row">
+                        <div class="upload-box">
+                            <label for="contractFile" class="upload-label">Attach a PDF contract here to
+                                analyze:</label>
+                            <input type="file" id="contractFile" accept="application/pdf" />
+                        </div>
+                        <button id="uploadContract" class="ghost-btn">Upload Contract (PDF)</button>
+                    </div>
+
+                    <div class="actions-row">
+                        <button id="genChecklist" class="secondary-btn">Generate Checklist</button>
+                        <button id="genBudget" class="secondary-btn">Generate Budget</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Checklist -->
+            <div class="card checklist-card">
+                <div class="panel-header">
+                    <h3>Checklist</h3>
+                    <select id="priorityFilter" class="filter-select">
+                        <option value="All">All</option>
+                        <option value="Emergency">Emergency</option>
+                        <option value="High">High</option>
+                        <option value="Normal">Normal</option>
+                    </select>
+                </div>
+                <div id="checklist"></div>
+            </div>
+
+            <!-- Budget -->
+            <div class="card budget-card">
+                <div class="panel-header">
+                    <h3>Budget</h3>
+                </div>
+                <div id="budget"></div>
+            </div>
+        </section>
+
+        <footer class="footer-note">
+            Built with FastAPI • LangChain • OpenAI
+        </footer>
+    </div>
+
+    <script src="/static/app.js"></script>
+    <script>
+        function fillPrompt(text) {
+            const input = document.getElementById("msg");
+            input.value = text;
+            input.focus();
+        }
+    </script>
+</body>
+
+</html>

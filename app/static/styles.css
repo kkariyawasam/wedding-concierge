@@ -1,0 +1,447 @@
+:root {
+    --bg: #fff7fb;
+    --card: rgba(255, 255, 255, 0.88);
+    --border: #efc8d8;
+    --text: #5c3346;
+    --muted: #916a7b;
+    --title: #81395b;
+    --primary: #d989af;
+    --primary-dark: #bd6d96;
+    --pill: #fae5ef;
+    --shadow: 0 18px 45px rgba(201, 149, 174, 0.14);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, ui-sans-serif, system-ui, Arial, sans-serif;
+    background: radial-gradient(circle at top left, #fff0f7 0%, #fff7fb 45%, #fffafc 100%);
+    color: var(--text);
+}
+
+.page-shell {
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 18px 22px 24px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 16px 18px;
+    box-shadow: var(--shadow);
+}
+
+.brand-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(180deg, #ffe7f1, #f8d5e5);
+    font-size: 18px;
+}
+
+.brand-title {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #3f2632;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.brand-subtitle {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.top-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 18px;
+    align-items: start;
+    margin-top: 18px;
+}
+
+.hero-block {
+    padding: 2px 4px;
+}
+
+.hero-block h1 {
+    margin: 0 0 10px;
+    font-size: 3.7rem;
+    line-height: 1.02;
+    color: var(--title);
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.hero-block p {
+    margin: 0;
+    max-width: 760px;
+    color: var(--muted);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.feature-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.pill {
+    padding: 9px 14px;
+    border-radius: 999px;
+    background: #fff8fc;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.pill.active {
+    background: var(--pill);
+    color: var(--title);
+    font-weight: 600;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 2.1fr 1fr 1fr;
+    gap: 18px;
+    margin-top: 18px;
+    align-items: stretch;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.card-header,
+.panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 18px;
+    border-bottom: 1px solid #f5d6e3;
+}
+
+.card-header h2,
+.panel-header h3 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #6c3552;
+}
+
+.card-header p {
+    margin: 4px 0 0;
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+.status-dot-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: #68c78b;
+}
+
+.chat {
+    height: 320px;
+    overflow-y: auto;
+    padding: 16px;
+    background: linear-gradient(180deg, #fffbfd 0%, #fff7fb 100%);
+}
+
+.msg {
+    max-width: 88%;
+    margin-bottom: 12px;
+    padding: 12px 14px;
+    border-radius: 18px;
+    line-height: 1.5;
+    border: 1px solid var(--border);
+    white-space: pre-wrap;
+}
+
+.me {
+    margin-left: auto;
+    background: linear-gradient(180deg, #ffe4ef, #ffd9e9);
+    color: #62384b;
+}
+
+.bot {
+    background: #fffdfd;
+    color: #5f3748;
+}
+
+.chat-input-row {
+    display: grid;
+    grid-template-columns: 1fr 96px;
+    gap: 10px;
+    padding: 14px 16px 0;
+}
+
+.quick-prompts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px 16px 14px;
+}
+
+.prompt-chip {
+    border: 1px solid var(--border);
+    background: #fff8fc;
+    color: #8a6275;
+    border-radius: 999px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 0.84rem;
+}
+
+.tools-card {
+    margin: 0 16px 16px;
+    padding: 14px;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid #f3d4e2;
+    border-radius: 18px;
+}
+
+.upload-row {
+    display: grid;
+    grid-template-columns: 1fr 180px;
+    gap: 12px;
+    align-items: center;
+}
+
+.upload-box {
+    background: linear-gradient(180deg, #fff8fc, #fff3f8);
+    border: 1px dashed #e8bfd3;
+    border-radius: 16px;
+    padding: 12px;
+}
+
+.upload-label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--muted);
+    font-size: 0.88rem;
+}
+
+.actions-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.profile-grid {
+    padding: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.profile-item {
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 12px;
+    min-height: 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-label {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 5px;
+}
+
+.checklist-card,
+.budget-card {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Scrollable sections */
+#checklist,
+#budget {
+    height: 650px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 14px;
+    scrollbar-width: thin;
+    /* Firefox */
+    scrollbar-color: #d989af #fff1f7;
+    /* Firefox */
+}
+
+/* Chrome / Edge / Safari */
+#checklist::-webkit-scrollbar,
+#budget::-webkit-scrollbar {
+    width: 10px;
+}
+
+#checklist::-webkit-scrollbar-track,
+#budget::-webkit-scrollbar-track {
+    background: #fff1f7;
+    border-radius: 999px;
+}
+
+#checklist::-webkit-scrollbar-thumb,
+#budget::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #ebb2ca, #d989af);
+    border-radius: 999px;
+    border: 2px solid #fff1f7;
+}
+
+/* Optional hover */
+#checklist::-webkit-scrollbar-thumb:hover,
+#budget::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #df9dbc, #c7779e);
+}
+
+.item {
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 12px;
+    margin-bottom: 10px;
+}
+
+.item b {
+    display: block;
+    font-size: 0.92rem;
+    line-height: 1.35;
+}
+
+.badge {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 3px 8px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    background: #ffe5ef;
+    border: 1px solid #efbfd0;
+    color: #9e5577;
+}
+
+input,
+select,
+button {
+    font: inherit;
+}
+
+input,
+.filter-select {
+    width: 100%;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--text);
+    border-radius: 16px;
+    padding: 12px 14px;
+    outline: none;
+}
+
+input:focus,
+.filter-select:focus {
+    border-color: #d99aba;
+    box-shadow: 0 0 0 4px rgba(217, 138, 178, 0.12);
+}
+
+button {
+    border: none;
+    border-radius: 16px;
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+.primary-btn {
+    background: linear-gradient(180deg, #d88bae, #c9789d);
+    color: white;
+    font-weight: 600;
+}
+
+.secondary-btn {
+    background: linear-gradient(180deg, #e5a3c1, #cf7ba4);
+    color: white;
+    font-weight: 600;
+}
+
+.ghost-btn {
+    background: rgba(255, 255, 255, 0.84);
+    color: var(--title);
+    border: 1px solid var(--border);
+}
+
+.footer-note {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.9rem;
+    padding: 16px 0 6px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+@media (max-width: 1200px) {
+    .top-row {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #checklist,
+    #budget {
+        height: auto;
+        max-height: 430px;
+    }
+}
+
+@media (max-width: 700px) {
+    .hero-block h1 {
+        font-size: 2.4rem;
+    }
+
+    .brand-title {
+        font-size: 1.4rem;
+    }
+
+    .chat-input-row,
+    .upload-row,
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .actions-row {
+        flex-direction: column;
+    }
+}
