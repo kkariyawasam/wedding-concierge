@@ -6,7 +6,7 @@ An AI-powered wedding planning assistant that acts as a **digital concierge**, h
 
 ## ✨ Features
 
-### 🧠 Phase 1 – Smart Foundation (MVP)
+### Smart Foundation (MVP)
 
 * **AI-Powered Onboarding**
 
@@ -33,7 +33,7 @@ An AI-powered wedding planning assistant that acts as a **digital concierge**, h
 
 ---
 
-### 🔍 Phase 2 – Researcher (AI + Data)
+### Researcher (AI + Data)
 
 * **Vendor Matchmaker (RAG)**
 
