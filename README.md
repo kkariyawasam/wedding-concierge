@@ -4,7 +4,7 @@ An AI-powered wedding planning assistant that acts as a **digital concierge**, h
 
 ---
 
-## ✨ Features
+## Features
 
 ### Smart Foundation (MVP)
 
@@ -66,7 +66,7 @@ An AI-powered wedding planning assistant that acts as a **digital concierge**, h
 
 ---
 
-## 🏗️ Tech Stack
+## Tech Stack
 
 ### Backend
 
@@ -91,7 +91,7 @@ An AI-powered wedding planning assistant that acts as a **digital concierge**, h
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 
 1. User starts chat → onboarding collects profile
 2. Profile is stored in SQLite (session-based)
@@ -110,7 +110,7 @@ An AI-powered wedding planning assistant that acts as a **digital concierge**, h
 
 ---
 
-## 🧪 Example Use Cases
+## Example Use Cases
 
 * "Find a florist in Berlin under 1500"
 * "Is this contract safe to sign?"
@@ -120,7 +120,7 @@ An AI-powered wedding planning assistant that acts as a **digital concierge**, h
 * "Generate my budget"
 
 
-## 📊 Data Storage
+## Data Storage
 
 SQLite stores:
 
@@ -134,7 +134,7 @@ All data is linked via **session_id (browser-based)**
 
 ---
 
-## 🧠 Future Enhancements
+## Future Enhancements
 
 * Multi-agent system (LangGraph)
 * Email drafting agent
@@ -143,10 +143,12 @@ All data is linked via **session_id (browser-based)**
 
 ---
 
-## 🌍 Impact
+## Impact
 
 * Reduces stress in wedding planning
 * Makes professional planning accessible to everyone
 * Saves time and cost with AI automation
 * Helps users make informed decisions (contracts, vendors, budgets)
 
+## UI
+<img width="514" height="409" alt="image" src="https://github.com/user-attachments/assets/5ae90b62-50d3-4234-ab7f-543356c58bd5" />
